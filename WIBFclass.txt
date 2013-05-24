@@ -1,0 +1,192 @@
+public class manageCustomPersonAccount{
+
+public Person_Account__c p = new Person_Account__c();
+
+  public static list<Person_Account__c> FieldsMap(list<Account> a)
+  {
+	 for(Account rec : a){
+
+             p = new Person_Account__c();
+                  
+				 p.recordtype__c = rec.RecordTypeId;
+				 p.Work_Address_Street_2__c = rec.Work_Address_Street_2__c;
+				 p.Work_Address_Street_1__c = rec.Work_Address_Street_1__c;
+				 p.Work_Address_Postcode__c = rec.Work_Address_Postcode__c;
+				 p.Work_Address_County__c = rec.Work_Address_County__c;
+				 p.Work_Address_Country__c = rec.Work_Address_Country__c;
+				 p.Work_Address_City__c = rec.Work_Address_City__c;
+				 p.Which_of_our_programmes_appeals_to_you__c = rec.Which_of_our_programmes_appeals_to_you__c;
+				 p.What_services_are_you_interested_in__c = rec.What_services_are_you_interested_in__c;
+				 p.What_other_Programmes_Events_would_you__c = rec.What_other_programmes_or_events_would_yo__c;
+				 p.Website__c = rec.Website;
+				 p.Type__c = rec.Type;
+				 p.Twitter_ID__c = rec.Twitter_ID__c;
+				 p.Total_Payments__c = rec.Total_Payments__c;
+				 p.Toastmaster_Speaker_Series__c = rec.Toastmaster_Speaker_Series__c;
+				 p.Toastmaster_Group__c = rec.Toastmaster_Group__c;
+				 p.Toastmaster_Group_Start_Date__c = rec.Toastmaster_Group_Start_Date__c;
+				  //p.Toastmaster_Group_Renewal_Date__c = rec.Toastmaster_Group_Renewal_Date__c;
+				 p.Toastmaster_Group_Name__c = rec.Toastmaster_Group_Name__c;
+				 p.Toastmaster_Fee_Paid__c = rec.Toastmaster_Fee_Paid__c;
+				 p.Toastmaster_Fee_Paid_Date__c = rec.Toastmaster_Fee_Paid_Date__c;
+				 p.Toastmaster_Fee_Due__c = rec.Toastmaster_Fee_Due__c;
+				 p.Title__c = rec.PersonTitle;
+				 p.Time_in_Role_Years__c = rec.Time_in_Role_Years__c;
+				 p.Time_in_Role_Months__c = rec.Time_in_Role_Months__c;
+				 p.Sponsor_Start_Date__c = rec.Sponsor_Start_Date__c;
+				 p.Sponsor_Renewal_Date__c = rec.Sponsor_Renewal_Date__c;
+				 p.Sponsor_Amount__c = rec.Sponsor_Amount__c;
+				 p.Special_Needs__c = rec.Special_Needs__c;
+				 p.Special_Needs_Please_Specify__c = rec.Special_Needs_Please_Specify__c;
+				 p.Shipping_Zip_Postal_Code__c = rec.ShippingPostalCode;
+				 p.Shipping_Street__c = rec.ShippingStreet;
+				 p.Shipping_State_Province__c = rec.ShippingState;
+				 p.Shipping_Country__c = rec.ShippingCountry;
+				 p.Shipping_City__c = rec.ShippingCity;
+				 p.Select_Additional_Roles__c = rec.Select_Additional_Roles__c;
+				 p.Sector__c = rec.Sector__c;
+				 p.Salutation__c = rec.Salutation;
+				 p.SIC_Description__c = rec.SicDesc;
+				 p.SIC_Code__c = rec.Sic;
+				 p.Role_Responsibilities__c = rec.Role_Responsibilities__c;
+				 p.Report_to_Corporate_Title__c = rec.Report_to_Corporate_Title__c;
+				 p.Relationship_Manager__c = rec.Relationship_Manager__c;
+				 p.Regional_Chapter_presence__c = rec.Regional_Chapter_presence__c;
+				 p.Rating__c = rec.Rating;
+				 p.Printed_Magazine__c = rec.Printed_Magazine__c;
+				 p.Previous_Roles__c = rec.Previous_Roles__c;
+				 p.Preferred_Magazine_Mailing_address__c = rec.Preferred_Magazine_Mailing_address__c;
+				 p.Please_give_NED_experience_details__c = rec.Please_give_NED_experience_details__c;
+				 p.Phone__c = rec.Phone;
+				 p.Personal_Excellence_Programme_workshops__c = rec.Personal_Excellence_Programme_workshops__c;
+				 p.PersonEmailCustomField__c = rec.PersonEmailCustomField__c;
+				 p.Pays_Membership_Fee__c = rec.Pays_Membership_Fee__c;
+				 p.Pay_By__c = rec.Pay_By__c;
+				 p.Parent_Account__c = rec.ParentId;
+				 p.Ownership__c = rec.Ownership;
+				 p.OwnerId = rec.OwnerId;
+				 p.Other__c = rec.Other__c;
+				 p.Other_Zip_Postal_Code__c = rec.PersonOtherPostalCode;
+				 p.Other_Street__c = rec.PersonOtherStreet;
+				 p.Other_State_Province__c = rec.PersonOtherState;
+				 p.Other_Phone__c = rec.PersonOtherPhone;
+				 p.Other_Event_Sponsorship__c = rec.Other_Event_Sponsorship__c;
+				 p.Other_Employer__c = rec.Other_Employer__c;
+				 p.Other_Country__c = rec.PersonOtherCountry;
+				 p.Other_City__c = rec.PersonOtherCity;
+				 p.Networking_drinks__c = rec.Networking_drinks__c;
+				 p.Network_Structure_Leadership__c = rec.Network_Structure_Leadership__c;
+				 p.Network_Focus__c = rec.Network_Focus__c;
+				 p.Name = rec.Name;
+				 p.NED_Experience__c = rec.NED_Experience__c;
+				// p.Months_From_Membership_Renewal__c = rec.Months_From_Membership_Renewal__c;
+				 //p.Months_From_Joining__c = rec.Months_From_Joining__c;
+				 p.Monthly_enewsletter__c = rec.Monthly_enewsletter__c;
+				 p.Mobile__c = rec.PersonMobilePhone;
+				 p.Mentoring_programme__c = rec.Mentoring_programme__c;
+				 p.Membership_type__c = rec.Membership_type__c;
+				 p.Membership_Status__c = rec.Membership_Status__c;
+				// p.Membership_Status_Report__c = rec.Membership_Status_Report__c;
+				 p.Membership_Start_Date__c = rec.Membership_Start_Date__c;
+				// p.Membership_Renewal_Date__c = rec.Membership_Renewal_Date__c;
+				 //p.Membership_Number__c = rec.Membership_Number__c;
+				// p.Membership_Fee__c = rec.Membership_Fee__c;
+				 p.Membership_Fee_4__c = rec.Membership_Fee_4__c;
+				 p.Membership_Fee_4_Date__c = rec.Membership_Fee_4_Date__c;
+				 p.Membership_Fee_3__c = rec.Membership_Fee_3__c;
+				 p.Membership_Fee_3_Date__c = rec.Membership_Fee_3_Date__c;
+				 p.Membership_Fee_2__c = rec.Membership_Fee_2__c;
+				 p.Membership_Fee_2_Date__c = rec.Membership_Fee_2_Date__c;
+				 p.Membership_Fee_1__c = rec.Membership_Fee_1__c;
+				 p.Membership_Fee_1_Date__c = rec.Membership_Fee_1_Date__c;
+				 p.Mailing_Zip_Postal_Code__c = rec.PersonMailingPostalCode;
+				 p.Mailing_Street__c = rec.PersonMailingStreet;
+				 p.Mailing_State_Province__c = rec.PersonMailingState;
+				 p.Mailing_Country__c = rec.PersonMailingCountry;
+				 p.Mailing_City__c = rec.PersonMailingCity;
+				 p.Mail_Sort_Type__c = rec.Mail_Sort_type__c;
+				 p.Maiden_Name__c = rec.Maiden_Name__c;
+				 p.Magazine__c = rec.Magazine__c;
+				 p.London__c = rec.London__c;
+				 p.LinkedIn_ID__c = rec.LinkedIn_ID__c;
+				 p.Legacy_Membership_Number__c = rec.Legacy_Membership_Number__c;
+				 p.Lead_Source__c = rec.PersonLeadSource;
+				 p.Last_Stay_in_Touch_Save_Date__c = rec.PersonLastCUUpdateDate;
+				 p.Last_Stay_in_Touch_Request_Date__c = rec.PersonLastCURequestDate;
+				 p.Last_Name__c = rec.LastName;
+				 p.Last_Membership_Renewal_Date__c = rec.Last_Membership_Renewal_Date__c;
+				 p.Last_Membership_Payment_date__c = rec.Last_Membership_Payment_date__c;
+				 p.Last_Invoice_Paid_Date__c = rec.Last_Invoice_Paid_Date__c;
+				 p.Last_Invoice_Date__c = rec.Last_Invoice_Date__c;
+				// p.LastModifiedDate = rec.LastModifiedDate;
+				// p.LastModifiedById = rec.LastModifiedById;
+				 p.Joining_Date__c = rec.Joining_Date__c;
+				// p.IsDeleted = rec.IsDeleted;
+				 p.Industry__c = rec.Industry; 
+				// p.Id = rec.Id;
+				 p.How_did_you_hear_about_WIBF__c = rec.How_did_you_hear_about_WIBF__c;
+				 p.How_can_we_cater_for_your_needs__c = rec.How_can_we_cater_for_your_needs__c;
+				 p.How_Many_Memberships_Funded__c = rec.How_Many_Memberships_Funded__c;
+				 p.Honoraries__c = rec.Honoraries__c;
+				 p.Home_Phone__c = rec.PersonHomePhone;
+				 p.Glasgow__c = rec.Glasgow__c;
+				 p.Gender__c = rec.Gender__c;
+				 p.First_Name__c = rec.FirstName; 
+				 p.Fax__c = rec.Fax;
+				 p.Fax_Opt_Out__c = rec.PersonHasOptedOutOfFax;
+				 p.Events_in_general__c = rec.Events_in_general__c;
+				 p.Ethnicity__c = rec.Ethnicity__c;
+				 p.Employer__c = rec.Employer__c;
+				 p.Employees__c = rec.NumberOfEmployees;
+				 p.Emailed_Magazine__c = rec.Emailed_Magazine__c;
+				 p.Email__c = rec.PersonEmail;
+				 p.Email_Opt_Out__c = rec.PersonHasOptedOutOfEmail;
+				 p.Edinburgh__c = rec.Edinburgh__c;
+				 p.Drivers_for_Joining__c = rec.Drivers_for_Joining__c;
+				 p.Do_Not_Call__c = rec.PersonDoNotCall;
+				 p.Description__c = rec.Description;
+				 p.Department__c = rec.PersonDepartment;
+				 p.Data_com_Key__c = rec.Jigsaw;
+				 p.Customer_Portal_Account__c = rec.IsCustomerPortal;
+				// p.CreatedDate = rec.CreatedDate;
+				// p.CreatedById = rec.CreatedById;
+				 p.Corporate_or_Functional_Titles__c = rec.Corporate_or_Functional_Titles__c;
+				 p.Corporate_Sponsor__c = rec.Corporate_Sponsor__c;
+				 p.Chapter__c = rec.Chapter__c;
+				 p.Business_Relationship__c = rec.Business_Relationship__c;
+				 p.Bristol__c = rec.Bristol__c;
+				 p.Birthdate__c = rec.PersonBirthdate;
+				 p.Billing_Zip_Postal_Code__c = rec.BillingPostalCode;
+				 p.Billing_Street__c = rec.BillingStreet;
+				 p.Billing_State_Province__c = rec.BillingState;
+				 p.Billing_Country__c = rec.BillingCountry;
+				 p.Billing_City__c = rec.BillingCity;
+				 p.Awards_for_Achievement__c = rec.Awards_for_Achievement__c;
+				 p.Award_Lunch__c = rec.Award_Lunch__c;
+				 p.Asst_Phone__c = rec.PersonAssistantPhone;
+				 p.Assistant__c = rec.PersonAssistantName;
+				 p.Annual_Revenue__c = rec.AnnualRevenue;
+				 //p.Age__c = rec.Age__c;
+				 p.Additional_Roles__c = rec.Additional_Roles__c;
+				 p.Activate_Portal_User__c = rec.Activate_Portal_User__c;
+				 p.Account__c = rec.Id;
+				 p.Account_Source__c = rec.AccountSource;
+				 p.Account_Site__c = rec.Site;
+				 p.Account_Number__c = rec.AccountNumber;
+				 
+        			  pa_list.add(p);
+
+                              } 
+        return   pa_list;                 
+  }
+
+public static void Insert()
+{
+	insert pa_list;   
+}
+public static void Update()
+{
+	upsert pa_list;   
+}
+
+}
